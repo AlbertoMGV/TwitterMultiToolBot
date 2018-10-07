@@ -96,14 +96,14 @@ var idtoname = function(){
 		user_id: '610675060',
 	}
 	Twitter.get('users/show', params ,  function (err, data, response) {
- 	console.log(data.screen_name)
+ 	console.log(data)
 	})
 }
 
 //LISTA TODOS LOS FOLLOWERS
-var flist = function(){
+var flist = function(name){
 	var params1 = {
-		screen_name: 'CNG_Official',
+		screen_name: name,
 	}
 	Twitter.get('followers/ids', params1 ,  function (err, data, response) {
  		var ids1 = data.ids;
@@ -132,6 +132,8 @@ var tuit = function(){
 
 }
 
+//SALUDA A TODOS TUS SEGUIDORES
+
 var flistHello = function(){
 	var params1 = {
 		screen_name: 'CNG_Official',
@@ -144,7 +146,7 @@ var flistHello = function(){
 	 				status:  '@' + data.screen_name + ' Gracias por seguirme brodel!',
 	 			}
 
-	 			Twitter.post('statuses/update', params, function(err, data, response) {
+	 			Twitter.post('statuses/update', params, function(err, data2, response) {
 	  				console.log('Hemos saludado a =' + data.screen_name)
 				})
 			})
@@ -156,26 +158,65 @@ var flistHello = function(){
 	})
 }
 
+//INFO DETALLADA DE UN USER
+var userinfo = function(name1){
+	var params = {
+		screen_name: name1,
+	}
+	Twitter.get('users/show', params ,  function (err, data, response) {
+ 		console.log('Nombre: '+data.name);
+ 		console.log('Arroba: '+data.screen_name);
+ 		console.log('ID: '+data.id_str);
+ 		console.log('Seguidos: '+data.friends_count);
+ 		console.log('Seguidores: '+data.followers_count);
+ 		console.log('Twits: '+data.statuses_count);
+ 		console.log('Favs: '+data.favourites_count);
+ 		console.log('***************************');
 
-/*   EJECUCION DE FUNCIONES */
+	})
+}
 
 
-/*favoriteTweet();
-setInterval(favoriteTweet, 3600000);
+//LISTA SEGUIDORES CON INFO DETALLADA
+var flist = function(name){
+	var params1 = {
+		screen_name: name,
+	}
+	Twitter.get('followers/ids', params1 ,  function (err, data, response) {
+ 		var ids1 = data.ids;
+ 		console.log('LISTANDO LOS '+ids1.length+" SEGUIDORES DE "+name+'...');
+	 	console.log('***************************');
+ 		for (var i = 0; i < ids1.length; i++) { 
+	  		Twitter.get('users/show', { user_id: ids1[i] } ,  function (err, data, response) {
+	 			
+	 			userinfo(data.screen_name);
+			})
+			
+		}
 
+
+ 		
+	})
+}
+
+
+/*
+LISTA DE TODAS LAS FUNCIONES DEFINIDAS
+
+favoriteTweet();
 retweet();
-setInterval(retweet, 5000);
-
 randomFav();
-
-
 searchID();
-
-flist();
- 
+idtoname();
+flist(name);
 tuit();
+flistHello();
+
+setInterval(functionname, miliseconds);
 
 */
 
-flistHello();
 
+/*   EJECUCION DE FUNCIONES [MAIN PROGRAM] */
+
+flist("AlbertoMGV");
