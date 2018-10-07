@@ -121,12 +121,9 @@ var flist = function(name){
 
 
 //TWUITTEA HOLA MUNDO
-var tuit = function(){
-	var params = {
-		status: 'HOLA MUNDO!',
-	}
+var tuit = function(textt){
 
-	Twitter.post('statuses/update', params, function(err, data, response) {
+	Twitter.post('statuses/update',{status: textt}, function(err, data, response) {
 	  console.log(data)
 	})
 
@@ -178,7 +175,7 @@ var userinfo = function(name1){
 
 
 //LISTA SEGUIDORES CON INFO DETALLADA
-var flist = function(name){
+var flistdata = function(name){
 	var params1 = {
 		screen_name: name,
 	}
@@ -199,6 +196,20 @@ var flist = function(name){
 	})
 }
 
+var naceElTiempo = function(){
+	var d = new Date();
+	var h = d.getHours();
+	var m = d.getMinutes();
+	var s = d.getSeconds();
+
+	if(h=='00'){
+		if(m=='00'){
+			tuit("00:00 Nace el tiempo");
+		}
+	}
+
+}
+
 
 /*
 LISTA DE TODAS LAS FUNCIONES DEFINIDAS
@@ -211,6 +222,10 @@ idtoname();
 flist(name);
 tuit();
 flistHello();
+flistdata(name);
+naceElTiempo();
+
+
 
 setInterval(functionname, miliseconds);
 
@@ -219,4 +234,3 @@ setInterval(functionname, miliseconds);
 
 /*   EJECUCION DE FUNCIONES [MAIN PROGRAM] */
 
-flist("AlbertoMGV");
