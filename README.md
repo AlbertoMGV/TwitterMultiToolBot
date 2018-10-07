@@ -4,25 +4,25 @@ Bot defined with some usefull functions, is needed to create config.js in root d
 
 ## Implemented Functions
 
-⋅⋅* favoriteTweet();
-⋅⋅* retweet();
-⋅⋅* randomFav();
-⋅⋅* searchID();
-⋅⋅* idtoname();
-⋅⋅* flist(name);
-⋅⋅* tuit();
-⋅⋅* flistHello();
-⋅⋅* flistdata(name);
-⋅⋅* naceElTiempo();
-⋅⋅* lastTwit('');
-⋅⋅* last20('');
-⋅⋅* last20x('');
-⋅⋅* queHoraEs();
-⋅⋅* favID();
-⋅⋅* rtID();
-⋅⋅* favLast20ID();
-⋅⋅* rtLast20ID();
-⋅⋅* espera();
++ favoriteTweet();
++ retweet();
++ randomFav();
++ searchID();
++ idtoname();
++ flist(name);
++ tuit();
++ flistHello();
++ flistdata(name);
++ naceElTiempo();
++ lastTwit('');
++ last20('');
++ last20x('');
++ queHoraEs();
++ favID();
++ rtID();
++ favLast20ID();
++ rtLast20ID();
++ espera();
 
 
 ## Config.js file example
