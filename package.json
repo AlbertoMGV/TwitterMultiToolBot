@@ -1,0 +1,22 @@
+{
+  "name": "twittermultitoolbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertoMGV/TwitterMultiToolBot.git"
+  },
+  "author": "Alberto Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertoMGV/TwitterMultiToolBot/issues"
+  },
+  "homepage": "https://github.com/AlbertoMGV/TwitterMultiToolBot#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
