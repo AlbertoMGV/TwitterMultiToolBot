@@ -8,9 +8,11 @@ var Twitter = new twit(config);
 
 
 // BUSCA Y RETWEETEA EL MAS RECIONES CON LOS HASTASGS DE LA QUERY
-var retweet = function() {
+
+/* hastags example = "#cats, #dogs"  */
+var retweet = function(hastags) {
     var params = {
-        q: '#CSGO, #csgo',
+        q: hastags,
         result_type: 'recent',
         
     }
@@ -36,9 +38,12 @@ var retweet = function() {
 
 
 // BUSCA Y FAVEA EL MAS RECIONES CON LOS HASTASGS DE LA QUERY
-var favoriteTweet = function(){
+
+/* hastags example = "#cats, #dogs"  */
+
+var favoriteTweet = function(hastags){
   var params = {
-      q: '#CSGO, #csgo',  
+      q: hastags,  
       result_type: 'recent',
   }
 
@@ -91,9 +96,9 @@ var searchID = function(name){
 }
 
 // COMBIERTE ID A USER
-var idtoname = function(){
+var idtoname = function(ID){
 	var params = {
-		user_id: '610675060',
+		user_id: ID,
 	}
 	Twitter.get('users/show', params ,  function (err, data, response) {
  	console.log(data)
@@ -131,9 +136,9 @@ var tuit = function(textt){
 
 //SALUDA A TODOS TUS SEGUIDORES
 
-var flistHello = function(){
+var flistHello = function(name){
 	var params1 = {
-		screen_name: 'CNG_Official',
+		screen_name: name,
 	}
 	Twitter.get('followers/ids', params1 ,  function (err, data1, response) {
  		var ids1 = data1.ids;
