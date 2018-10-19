@@ -399,6 +399,3 @@ setInterval(functionname, miliseconds);
 
 
 ----------------------------------------EJECUCION DE FUNCIONES [MAIN PROGRAM]---------------------------------------- */
-
-
-
