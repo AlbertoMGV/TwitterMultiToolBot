@@ -39,7 +39,24 @@ module.exports = {
 + rtLast20ID();
 + espera();
 
+### Installation
 
+1. Clone the repository
+```sh
+$ git clone https://github.com/AlbertoMGV/TwitterMultiToolBot
+```
+
+2. Install Node Modules
+
+```sh
+$ npm install
+```
+
+3. Run the bot
+
+```sh
+$ node bot.js
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
