@@ -1,6 +1,21 @@
-# TwitterMultiToolBot
+# TwitterMultiToolBot 🤖
 
 Bot defined with some usefull functions, is needed to create config.js in root directory with app and user consumer and access tokens, I leave an example at the end of this doc. Also is required to uncoment functions and create your own program. In case of wanting to upload to a server, use the comand "setInterval(*functionName*, *milisecons*);" to leave it running in a loop.
+
+#### Config.js file example
+```
+module.exports = {
+
+    consumer_key: '',
+  
+    consumer_secret: '',
+  
+    access_token: '',  
+  
+    access_token_secret: ''
+  
+}
+```
 
 ## Implemented Functions
 
@@ -25,16 +40,15 @@ Bot defined with some usefull functions, is needed to create config.js in root d
 + espera();
 
 
-## Config.js file example
 
-module.exports = {
+<!-- CONTRIBUTING -->
+## Contributing
 
-    consumer_key: '',
-  
-    consumer_secret: '',
-  
-    access_token: '',  
-  
-    access_token_secret: ''
-  
-}
+Feel free to open pull requests with new features or bug fixes. Any contributions you make are **greatly appreciated**.
+
+As the license states, you can fork and even redistribute this as long as it is communicated to me.
+
+<!-- CONTACT -->
+## Contact
+
+If you are not that tech savvy feel free to ask me any questions via email. Or if youre thinking about continue developing that project contact me!
